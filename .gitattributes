@@ -1,0 +1,5 @@
+* text=auto
+*.xml text
+*.json text
+*.php text
+*.sh text eol=lf
