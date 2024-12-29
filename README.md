@@ -68,11 +68,3 @@ Ensure you have the following installed:
    Access the CMS at [http://127.0.0.1:8000](http://127.0.0.1:8000).
 
 ---
-
-
-## 💬 Contact
-
-For questions or support, please contact:
-- **Email**: your-email@example.com
-- **GitHub**: [your-username](https://github.com/your-username)
-
