@@ -1,0 +1,9 @@
+{
+  "id": "exemple",
+  "name": "ExempleTheme",
+  "description": "Exemple theme for Elyxia-cms",
+  "version": "1.0.0",
+  "authors": [
+    "Tom4z"
+  ]
+}

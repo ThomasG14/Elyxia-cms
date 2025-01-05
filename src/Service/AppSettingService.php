@@ -2,11 +2,20 @@
 
 namespace App\Service;
 
+use App\Repository\SettingRepository;
+
 class AppSettingService
 {
-    //Service to manage app settings
+    public function __construct(
+        private readonly SettingRepository $settingRepository,)
+    {}
 
-//    public function __construct(){
-//
-//    }
+    public function getAppSettings(): array{
+        $settingsEntity =  $this->settingRepository->findAll();
+        $settings = [];
+        foreach ($settingsEntity as $setting){
+            $settings[$setting->getName()] = $setting->getValue();
+        }
+        return $settings;
+    }
 }
