@@ -13,6 +13,8 @@ class HomeController extends AbstractController
     {
         return $this->render('home/index.html.twig', [
             'controller_name' => 'HomeController',
+            'appName' => 'Helyxia',
+            'pageName' => 'Home',
             'favicon' => 'favicon.svg',
             'lang' => 'fr'
         ]);
