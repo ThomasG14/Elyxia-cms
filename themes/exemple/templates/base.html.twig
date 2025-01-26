@@ -4,16 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/svg+xml" href="{{ asset('images/favicon/' ~ favicon )}}" />
-    <link rel="stylesheet" href="../assets/styles/app.css">
+{#    <link rel="stylesheet" href="{{ asset('build/' ~ settings.theme ~ '.css') }}">#}
     <title>{{ pageName }} • {{ settings.name }}</title>
 
     {% block stylesheets %}
-        {{ encore_entry_link_tags('app') }}
+        {{ encore_entry_link_tags(settings.theme) }}
     {% endblock %}
 
     {% block javascripts %}
-        {% block importmap %}{{ importmap('app') }}{% endblock %}
-        {{ encore_entry_script_tags('app') }}
+        {{ encore_entry_script_tags(settings.theme) }}
 
     {% endblock %}
 </head>

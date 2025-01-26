@@ -19,7 +19,7 @@ class HomeController extends AbstractController
     {
         $settings = $this->appSettingService->getAppSettings();
 
-        return $this->render('@theme/exemple/templates/home/index.html.twig', [
+        return $this->render('@themes/exemple/templates/home/index.html.twig', [
             'controller_name' => 'HomeController',
             'appName' => 'Helyxia',
             'pageName' => 'Home',

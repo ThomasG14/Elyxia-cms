@@ -5,6 +5,14 @@ const Encore = require('@symfony/webpack-encore');
 if (!Encore.isRuntimeEnvironmentConfigured()) {
     Encore.configureRuntimeEnvironment(process.env.NODE_ENV || 'dev');
 }
+//Search themes
+const fs = require('fs');
+const path = require('path');
+const themesDir = './themes';
+const themes = fs.readdirSync(themesDir).filter(theme => {
+    return fs.statSync(path.join(themesDir, theme)).isDirectory();
+});
+
 
 Encore
     // directory where compiled assets will be stored
@@ -71,5 +79,12 @@ Encore
     // uncomment if you're having problems with a jQuery plugin
     //.autoProvidejQuery()
 ;
+
+themes.forEach(theme => {
+    const cssFilePath = path.join(themesDir, theme, 'assets/app.js');
+    if (fs.existsSync(cssFilePath)) { // Vérifie si le fichier existe
+        Encore.addEntry(theme, './' + cssFilePath);
+    }
+});
 
 module.exports = Encore.getWebpackConfig();

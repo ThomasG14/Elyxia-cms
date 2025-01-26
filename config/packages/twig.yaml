@@ -1,7 +1,7 @@
 twig:
     file_name_pattern: '*.twig'
     paths:
-        'theme': 'theme'
+        'themes': 'themes'
 
 when@test:
     twig:
