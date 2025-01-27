@@ -82,7 +82,7 @@ Encore
 
 themes.forEach(theme => {
     const cssFilePath = path.join(themesDir, theme, 'assets/app.js');
-    if (fs.existsSync(cssFilePath)) { // Vérifie si le fichier existe
+    if (fs.existsSync(cssFilePath)) {
         Encore.addEntry(theme, './' + cssFilePath);
     }
 });

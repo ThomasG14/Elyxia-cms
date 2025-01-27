@@ -1,23 +1,21 @@
 <!DOCTYPE html>
 <html lang="{{ settings.local }}">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/svg+xml" href="{{ asset('images/favicon/' ~ favicon )}}" />
-{#    <link rel="stylesheet" href="{{ asset('build/' ~ settings.theme ~ '.css') }}">#}
-    <title>{{ pageName }} • {{ settings.name }}</title>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" type="image/svg+xml" href="{{ asset('images/favicon/' ~ settings.favicon )}}" />
+        <title>{{ pageName }} • {{ settings.name }}</title>
 
-    {% block stylesheets %}
-        {{ encore_entry_link_tags(settings.theme) }}
-    {% endblock %}
+        {% block stylesheets %}
+            {{ encore_entry_link_tags(settings.theme) }}
+        {% endblock %}
 
-    {% block javascripts %}
-        {{ encore_entry_script_tags(settings.theme) }}
+        {% block javascripts %}
+            {{ encore_entry_script_tags(settings.theme) }}
 
-    {% endblock %}
-</head>
-<body>
-<h1>This is base for theme</h1>
-{% block body %}{% endblock %}
-</body>
+        {% endblock %}
+    </head>
+    <body>
+        {% block body %}{% endblock %}
+    </body>
 </html>

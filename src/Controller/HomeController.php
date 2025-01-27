@@ -2,7 +2,6 @@
 
 namespace App\Controller;
 
-use App\Repository\SettingRepository;
 use App\Service\AppSettingService;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
@@ -18,23 +17,10 @@ class HomeController extends AbstractController
     public function index(): Response
     {
         $settings = $this->appSettingService->getAppSettings();
-
-        return $this->render('@themes/exemple/templates/home/index.html.twig', [
-            'controller_name' => 'HomeController',
-            'appName' => 'Helyxia',
-            'pageName' => 'Home',
-            'favicon' => 'favicon.svg',
-            'lang' => 'fr',
+        return $this->render($settings['themePath'] . 'home/index.html.twig', [
+            'pageName' => 'home',
             'settings' => $settings,
         ]);
 
-        return $this->render('home/index.html.twig', [
-            'controller_name' => 'HomeController',
-            'appName' => 'Helyxia',
-            'pageName' => 'Home',
-            'favicon' => 'favicon.svg',
-            'lang' => 'fr',
-            'settings' => $settings,
-        ]);
     }
 }

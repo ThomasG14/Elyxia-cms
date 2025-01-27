@@ -2,6 +2,17 @@
 
 {% block body %}
     <div class="max-w-4xl mx-auto p-6 bg-white rounded-lg shadow-md mt-8">
-        <h1 class="text-3xl font-semibold text-gray-900 mb-4">This view is a fucking theme baby</h1>
+        <h1 class="text-3xl font-semibold text-gray-900 mb-4">Hello {{ pageName }}! ✅</h1>
+
+        <p class="text-gray-700 mt-6 mb-4">
+            App setting:
+        </p>
+
+        <ul class="list-disc pl-6 text-gray-700">
+            {% for key, setting in settings %}
+                <li>{{ key }} : {{ setting }}</li>
+            {% endfor %}
+        </ul>
+
     </div>
 {% endblock %}

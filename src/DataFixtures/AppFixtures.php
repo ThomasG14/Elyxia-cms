@@ -81,7 +81,7 @@ class AppFixtures extends Fixture
 
         $theme = (new Setting())
             ->setName('theme')
-            ->setValue('default');
+            ->setValue('app');
         $manager->persist($theme);
 
         $enableMaintenance = (new Setting())
@@ -95,8 +95,8 @@ class AppFixtures extends Fixture
         $manager->persist($messageMaintenance);
 
         $icon = (new Setting())
-            ->setName('icon')
-            ->setValue('defaultIcon.png');
+            ->setName('favicon')
+            ->setValue('defaultIcon.svg');
         $manager->persist($icon);
 
         $logo = (new Setting())
