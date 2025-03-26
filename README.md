@@ -36,7 +36,7 @@ Ensure you have the following installed:
 
 1. **Clone the repository**:
    ```bash
-   git clone https://github.com/your-username/elyxia-cms.git
+   git clone https://github.com/ThomasG14/Elyxia-cms.git
    cd elyxia-cms
    ```
 
